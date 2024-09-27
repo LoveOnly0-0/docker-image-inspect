@@ -3,7 +3,7 @@ name: Download Image from Alibaba Cloud
 on:  
   push:  
     branches: [ main ]  
-  
+
 jobs:  
   download-image:  
     runs-on: ubuntu-latest  
