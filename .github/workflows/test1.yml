@@ -15,22 +15,22 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v2.2.0
       with:
-        registry: crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/docker_ui #注意这里
+        registry: crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/nginx #注意这里
         username: 18142600980
         password: qjj19971111
         logout: false
           
     - name: Pull Docker Images and Package
       run: |
-          docker pull crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/rancher:latest
-          docker save crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/rancher:latest -o docker_rancher.tar 
+          docker pull crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/nginx:latest
+          docker save crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/nginx:latest -o docker_nginx.tar 
   
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: docker_rancher.tar
-        path: docker_rancher.tar
+        name: docker_nginx.tar
+        path: docker_nginx.tar
         retention-days: 1  # 将保留天数设置为 1 天 最多可设置90天
 
 
