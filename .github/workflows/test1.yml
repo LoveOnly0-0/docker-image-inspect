@@ -22,15 +22,15 @@ jobs:
           
     - name: Pull Docker Images and Package
       run: |
-          docker pull crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/docker_ui:last 
-          docker save crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/docker_ui:last -o docker_ui-arm64.tar 
+          docker pull crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/rancher:latest
+          docker save crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/rancher:latest -o docker_rancher.tar 
   
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: docker_ui-arm64.tar
-        path: docker_ui-arm64.tar
+        name: docker_rancher.tar
+        path: docker_rancher.tar
         retention-days: 1  # 将保留天数设置为 1 天 最多可设置90天
 
 
