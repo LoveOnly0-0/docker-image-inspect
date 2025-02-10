@@ -15,15 +15,15 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v2.2.0
       with:
-        registry: crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/onlyoffice_documentserver #注意这里
+        registry: crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/onlyoffice #注意这里
         username: 18142600980
         password: qjj19971111
         logout: false
           
     - name: Pull Docker Images and Package
       run: |
-          docker pull crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/onlyoffice_documentserver
-          docker save crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/onlyoffice_documentserver -o docker_onlyoffice.tar 
+          docker pull crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/onlyoffice
+          docker save crpi-ixmppstjb24p0kx8.cn-guangzhou.personal.cr.aliyuncs.com/docker_copy_2024_09_27/onlyoffice -o docker_onlyoffice.tar 
   
 
     - name: Upload artifact
