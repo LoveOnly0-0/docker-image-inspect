@@ -22,7 +22,7 @@ jobs:
           
     - name: Pull Docker Images and Package
       run: |
-          docker pull  https://tlw1zoz0.mirror.aliyuncs.com/jenkins
+          # docker pull  https://tlw1zoz0.mirror.aliyuncs.com/jenkins
           docker save  https://tlw1zoz0.mirror.aliyuncs.com/jenkins -o jenkins.tar 
   
 
