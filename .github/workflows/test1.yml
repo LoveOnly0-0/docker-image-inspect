@@ -23,8 +23,8 @@ jobs:
     - name: Pull Docker Images and Package
       run: |
           # docker pull  https://tlw1zoz0.mirror.aliyuncs.com/jenkins
-          docker pull registry.cn-hangzhou.aliyuncs.com/jenkins/jenkins:lts
-          docker save registry.cn-hangzhou.aliyuncs.com/jenkins/jenkins:lts -o jenkins.tar 
+          docker pull tlw1zoz0.mirror.aliyuncs.com/jenkins/jenkins:lts
+          docker save tlw1zoz0.mirror.aliyuncs.com/jenkins/jenkins:lts -o jenkins.tar 
   
 
     - name: Upload artifact
