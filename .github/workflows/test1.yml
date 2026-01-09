@@ -23,8 +23,8 @@ jobs:
     - name: Pull Docker Images and Package
       run: |
           # docker pull  https://tlw1zoz0.mirror.aliyuncs.com/jenkins
-          docker pull docker.mirrors.ustc.edu.cn/jenkins/jenkins:lts
-          docker save docker.mirrors.ustc.edu.cn/jenkins/jenkins:lts -o jenkins.tar 
+          docker pull hub-mirror.c.163.com/jenkins/jenkins:lts
+          docker save hub-mirror.c.163.com/jenkins/jenkins:lts -o jenkins.tar 
   
 
     - name: Upload artifact
