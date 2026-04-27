@@ -15,23 +15,23 @@ jobs:
     # - name: Login to Docker Hub
     #   uses: docker/login-action@v2.2.0
     #   with:
-    #     registry: https://tlw1zoz0.mirror.aliyuncs.com/jenkins #注意这里
+    #     registry: https://tlw1zoz0.mirror.aliyuncs.com/weknora:latest #注意这里
     #     username: 18142600980
     #     password: qjj19971111
     #     logout: false
           
     - name: Pull Docker Images and Package
       run: |
-          # docker pull  https://tlw1zoz0.mirror.aliyuncs.com/jenkins
-          docker pull hub-mirror.c.163.com/jenkins/jenkins:lts
-          docker save hub-mirror.c.163.com/jenkins/jenkins:lts -o jenkins.tar 
+          # docker pull  https://tlw1zoz0.mirror.aliyuncs.com/weknora:latest
+          docker pull hub-mirror.c.163.com/weknora/weknora:latest
+          docker save hub-mirror.c.163.com/weknora/weknora:latest -o weknora.tar 
   
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: jenkins.tar
-        path: jenkins.tar
+        name: weknora.tar
+        path: weknora.tar
         retention-days: 1  # 将保留天数设置为 1 天 最多可设置90天
 
 
